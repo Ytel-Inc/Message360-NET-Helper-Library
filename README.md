@@ -8,7 +8,7 @@ This is home to the Official .NET Message360 REST API.
 ```C#
 Msg360APIRestClient Client = new Msg360APIRestClient("YT10ff38384xyz", "1acff58abc", ".xml");
 var random = new Random();
-var newSms = Client.SMS_SendSMS("5552221133", "6203345599", "test sms", "1", "1");
+var newSms = Client.SMS_SendSMS("5552221133", "6203345599", "test sms " + random.ToString(), "1", "1");
 Console.WriteLine(newSms.ToString());
 Console.ReadLine();
 ```
