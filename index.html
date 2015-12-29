@@ -49,7 +49,7 @@
 
 <div class="highlight highlight-source-cs"><pre>Msg360APIRestClient Client = <span class="pl-k">new</span> Msg360APIRestClient(<span class="pl-s"><span class="pl-pds">"</span>YT10ff38384xyz<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>1acff58abc<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>.xml<span class="pl-pds">"</span></span>);
 <span class="pl-k">var</span> random = <span class="pl-k">new</span> Random();
-<span class="pl-k">var</span> newSms = Client.SMS_SendSMS(<span class="pl-s"><span class="pl-pds">"</span>5552221133<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>6203345599<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>test sms<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> newSms = Client.SMS_SendSMS(<span class="pl-s"><span class="pl-pds">"</span>5552221133<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>6203345599<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>test sms <span class="pl-pds">"</span></span> + random.ToString(), <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>);
 Console.WriteLine(newSms.ToString());
 Console.ReadLine();</pre></div>
 
