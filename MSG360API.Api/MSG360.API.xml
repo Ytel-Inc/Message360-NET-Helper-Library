@@ -1,0 +1,1691 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MSG360.API</name>
+    </assembly>
+    <members>
+        <member name="T:Msg360API.Msg360APIRestClient">
+            <summary>
+            Msg360API REST API wrapper.
+            </summary>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Accounts_ViewAccount">
+            <summary>
+            The request response returned here contains all resource properties associated with your message360 account.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.AddressBook_CreateAddresses(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
+            </summary>
+            <param name="name"></param>
+            <param name="address"></param>
+            <param name="state"></param>
+            <param name="zip"></param>
+            <param name="country"></param>
+            <param name="city"></param>
+            <param name="description">can be null</param>
+            <param name="email">can be null</param>
+            <param name="phone">can be null</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.AddressBook_CreateAddresses(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
+            </summary>
+            <param name="name"></param>
+            <param name="address"></param>
+            <param name="state"></param>
+            <param name="zip"></param>
+            <param name="country"></param>
+            <param name="city"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.AddressBook_ViewAddresses(System.String)">
+            <summary>
+            To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
+            </summary>
+            <param name="addressId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.AddressBook_ListAddress(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.DateTime})">
+            <summary>
+            To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
+            Returns a list of your addresses. The addresses are returned sorted by creation date, with the most recently created addresses appearing first.
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="addressid"></param>
+            <param name="datecreated"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.AddressBook_ListAddress">
+            <summary>
+            To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
+            Returns a list of your addresses. The addresses are returned sorted by creation date, with the most recently created addresses appearing first.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.AddressBook_VerifyAddresses(System.String)">
+            <summary>
+            Validates an address given.
+            </summary>
+            <param name="addressid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.AddressBook_DeleteAddresses(System.String)">
+            <summary>
+            To add an address to your address book, you create a new address object. You can retrieve and delete individual addresses as well as get a list of addresses. Addresses are identified by a unique random ID.
+            Permanently deletes a customer. It cannot be undone.
+            </summary>
+            <param name="addressId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PhoneNumbers_AvailablePhoneNumbers(System.String,System.String,Msg360API.AvaliablePhoneNumberType)">
+            <summary>
+            The request response returned here contains a list of all available phone numbers that can be purchased for use with your Message360 account.
+            </summary>
+            <param name="isoCountryCode">Two letter country code of the available phone number.</param>
+            <param name="areaCode">Code used to identify the phone numbers geographic origin. Found at the beginning of the number.</param>
+            <param name="contains">Specifies the desired characters contained within the available numbers to list.</param>
+            <param name="inRegion">Specifies the desired region of the available numbers to be listed.</param>
+            <param name="inPostalCode">Specifies the desired postal code of the available numbers to be listed.</param>
+            <param name="type">Search for local (default) or toll free nubmers.</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_ViewCall(System.String)">
+            <summary>
+            A call resource provides information about an individual call that has occurred through Message360. 
+            Both inbound and outbound voice communication through Message360 are categorized as calls. 
+            The resource properties representing a call are listed below. 
+            Call resources can be accessed at a resource URI made up of the Message360 base URL and a unique call SID.
+            </summary>
+            <param name="callSid"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_ListCall">
+            <summary>
+            The request response returned here contains a list of calls associated with your Message360 account.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_ListCall(Msg360API.CallListOptions)">
+            <summary>
+            The request response returned here contains a list of calls associated with your Message360 account.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_MakeCall(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Here you can experiment with initiating a call through Message360 and view the request response generated when doing so.
+            </summary>
+            <param name="from">The number to call.</param>
+            <param name="to">The number to display as calling.</param>
+            <param name="url">The URL requested once the call connects.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_MakeCall(Msg360API.CallOptions)">
+            <summary>
+            Here you can experiment with initiating a call through Message360 and view the request response generated when doing so.
+            </summary>
+            <param name="callOptions">Call options</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_InterruptCall(System.String,System.String,System.Nullable{Msg360API.HttpMethod},System.Nullable{Msg360API.HangupCallStatus})">
+            <summary>
+            Here you can experiment with modifying a call through Message360 and view the request response doing so generates.
+            </summary>
+            <param name="callSid">An alphanumeric string used for identification of calls</param>
+            <param name="url">The URL in-progress calls can be forwarded to.</param>
+            <param name="httpMethod">Specifies the HTTP method used to request forwarding URL. Allowed Value: POST or GET. Default Value: POST</param>
+            <param name="status">The status used to end the call. canceled only ends queued/ringing calls while completed ends in-progress calls as well as queued/ringing calls. Allowed Value: canceled or completed</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_InterruptCall(System.String)">
+            <summary>
+            Here you can experiment with modifying a call through Message360 and view the request response doing so generates.
+            </summary>
+            <param name="callSid">An alphanumeric string used for identification of calls</param>
+            <param name="url">The URL in-progress calls can be forwarded to.</param>
+            <param name="httpMethod">Specifies the HTTP method used to request forwarding URL. Allowed Value: POST or GET. Default Value: POST</param>
+            <param name="status">The status used to end the call. canceled only ends queued/ringing calls while completed ends in-progress calls as well as queued/ringing calls. Allowed Value: canceled or completed</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_SendDigitsToCall(System.String,System.String)">
+            <summary>
+            Here you can experiment with sending digits to a call through MSG360API and view the request response generated when doing so.
+            </summary>
+            <param name="callSid">An alphanumeric string used for identification of calls</param>
+            <param name="playDtmf">Specifies which touch tone signals to send to a call. W or w can be used to include half second pauses within the digit transmission. For example: wwww1234 waits two seconds before sending the digits and 12wwww34 waits two seconds in between the sending of 12 and 34. Allowed Value: the digits 0-9, W, or w</param>
+            <param name="dtmfLeg">Specifies which leg of the call digits will be sent to. 'aleg' leg is the originator of the call, 'bleg' is the recipient of the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_SendDigitsToCall(System.String,System.String,System.String)">
+            <summary>
+            Here you can experiment with sending digits to a call through MSG360API and view the request response generated when doing so.
+            </summary>
+            <param name="callSid">An alphanumeric string used for identification of calls</param>
+            <param name="playDtmf">Specifies which touch tone signals to send to a call. W or w can be used to include half second pauses within the digit transmission. For example: wwww1234 waits two seconds before sending the digits and 12wwww34 waits two seconds in between the sending of 12 and 34. Allowed Value: the digits 0-9, W, or w</param>
+            <param name="dtmfLeg">Specifies which leg of the call digits will be sent to. 'aleg' leg is the originator of the call, 'bleg' is the recipient of the call.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_PlayAudioToCall(System.String,System.String)">
+            <summary>
+            Message360 allows you to play an audio file during a call. This is useful for playing hold music, providing IVR prompts, etc.
+            </summary>
+            <param name="callSid">An alphanumeric string used for identification of calls</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_PlayAudioToCall(System.String,Msg360API.PlayAudioOptions)">
+            <summary>
+            Message360 allows you to play an audio file during a call. This is useful for playing hold music, providing IVR prompts, etc.
+            </summary>
+            <param name="callSid">An alphanumeric string used for identification of calls</param>
+            <param name="audioOptions">Audio options</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_VoiceEffects(System.String,Msg360API.VoiceEffectOptions)">
+            <summary>
+            Here you can experiment with adding voice audio effects on a call through Message360 and view the request response generated when doing so.
+            </summary>
+            <param name="callSid">An alphanumeric string used for identification of calls</param>
+            <param name="effectOptions">Voice effect options</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_RecordCall(System.String,System.Boolean)">
+             <summary>
+            Here you can experiment with initiating or terminating a live call recording through Message360 and view the request response generated when doing so.
+             </summary>
+             <param name="callSid">An alphanumeric string used for identification of calls</param>
+             <param name="isRecording">Specifies if call recording should beging or end. To start recording a call, value must be true. To stop recording a call, value must be false.</param>
+             <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Calls_RecordCall(System.String,System.Boolean,System.Nullable{Msg360API.PlayAudioDirection},System.Nullable{System.Int32},System.String,System.String)">
+            <summary>
+            Here you can experiment with initiating or terminating a live call recording through Message360 and view the request response generated when doing so.
+            </summary>
+            <param name="callSid">An alphanumeric string used for identification of calls</param>
+            <param name="isRecording">Specifies if call recording should beging or end. To start recording a call, value must be true. To stop recording a call, value must be false.</param>
+            <param name="timeLimit">The time in seconds the duration a call recording should not exceed. If no value specified, recordings are 60 seconds by default.</param>
+            <param name="callbackUrl">URL where recording information will be relayed to after it has completed.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.CreateCallOptions(Msg360API.CallOptions,RestSharp.RestRequest)">
+            <summary>
+            Helper method to populate Rest params
+            </summary>
+            <param name="callOptions">Call options</param>
+            <param name="request">Rest Request</param>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.CreateCallListOptions(Msg360API.CallListOptions,RestSharp.RestRequest)">
+            <summary>
+            Helper method to populate Rest params
+            </summary>
+            <param name="callListOptions">Call options</param>
+            <param name="request">Rest Request</param>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.CreatePlayAudioOptions(Msg360API.PlayAudioOptions,RestSharp.RestRequest)">
+            <summary>
+            Helper method to populate Rest params
+            </summary>
+            <param name="audioOptions">Audio options</param>
+            <param name="request">Rest Request</param>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.CreateVoiceEffectsOptions(Msg360API.VoiceEffectOptions,RestSharp.RestRequest)">
+            <summary>
+            Helper method to populate Rest params
+            </summary>
+            <param name="voiceOptions">Voice effect options</param>
+            <param name="request">Rest Request</param>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.CarrierServices_CarrierLookup(System.String)">
+            <summary>
+            The response returned here contains all resource properties associated with the given Carrier.
+            </summary>
+            <param name="phoneNumber">The number of the phone you are attempting to perform the carrier look up on.</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.CarrierServices_CarrierLookupList">
+            <summary>
+            Shows info on all carrier lookups associated with your Message360 account.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_ViewConference(System.String)">
+            <summary>
+            The request response returned here contains all resource properties associated with the conference name.
+            </summary>
+            <param name="conferenceSid">Conference sid</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_ListConference">
+            <summary>
+            The request response returned here contains a list of all conferences associated with an account.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_ListConference(System.String)">
+             <summary>
+            The request response returned here contains a list of all conferences associated with an account.
+             </summary>
+             <param name="friendlyName">List conferences with the given FriendlyName.</param>
+             <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_ListConference(Msg360API.ConferenceStatus,System.DateTime,Msg360API.ComparisonType)">
+             <summary>
+            The request response returned here contains a list of all conferences associated with an account.
+             </summary>
+             <param name="status">List conferences with the given status.</param>
+             <param name="dateCreated">List conferences created on, after, or before a given date. </param>
+             <param name="dateCreatedComaparasion">Date range can be specified using inequalities</param>
+             <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_ListConference(System.String,System.Nullable{Msg360API.ConferenceStatus},System.Nullable{System.DateTime},System.Nullable{Msg360API.ComparisonType},System.Nullable{System.DateTime},System.Nullable{Msg360API.ComparisonType},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            The request response returned here contains a list of all conferences associated with an account.
+            </summary>
+            <param name="friendlyName">List conferences with the given FriendlyName.</param>
+            <param name="status">List conferences with the given status.</param>
+            <param name="dateCreated">List conferences created on, after, or before a given date.</param>
+            <param name="dateCreatedComparasion">Date range can be specified using inequalities.</param>
+            <param name="dateUpdated">List conferences updated on, after, or before a given date.</param>
+            <param name="dateUpdatedComparasion">Date range can be specified using inequalities.</param>
+            <param name="page">Used to return a particular page withing the list.</param>
+            <param name="pageSize">Used to specify the amount of list items to return per page.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_AddParticipant(System.String,System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            Here you can experiment with playing audio to conference participants.
+            </summary>
+            <param name="conferenceSid">Conference sid</param>
+            <param name="countryCode">Specifies the participant to play audio.</param>
+            <param name="participantnumber">Participant Number</param>
+            /// <param name="muted">Boolean Value for Mute</param>
+            /// <param name="deaf">Boolean Value for Deaf </param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_AddParticipant(System.String,System.String,System.String)">
+            <summary>
+            Here you can experiment with playing audio to conference participants.
+            </summary>
+            <param name="conferenceSid">Conference sid</param>
+            <param name="countryCode">Specifies the participant to play audio.</param>
+            <param name="participantnumber">Participant Number</param>
+            /// <param name="muted">Boolean Value for Mute</param>
+            /// <param name="deaf">Boolean Value for Deaf </param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_ViewParticipant(System.String,System.String)">
+            <summary>
+            The request response returned here contains a conference participant resource.
+            </summary>
+            <param name="conferenceSid">Conference sid</param>
+            <param name="participantSid">participant Sid</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_ListParticipants(System.String,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            The request response returned here contains a list of all conferences associated with an account.
+            </summary>
+            <param name="conferenceSid"></param>
+            <param name="callSid">The CallSid identifying this participant.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_DeafMuteParticipant(System.String,System.String,System.Nullable{System.Boolean},System.Nullable{System.Boolean})">
+            <summary>
+            Here you can experiment with the deaf or mute conference participant API methods.
+            </summary>
+            <param name="conferenceSid">Conference sid</param>
+            <param name="participantid">Specifies the participant to mute.</param>
+            <param name="mute">Mute participant?</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_DeafParticipant(System.String,System.String,System.Boolean)">
+            <summary>
+            Here you can experiment with the deaf or mute conference participant API methods.  
+            </summary>
+            <param name="conferenceSid">Conference sid</param>
+            <param name="participant">Specifies the participant to deaf.</param>
+            <param name="deaf">Deaf participant?</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_HangupParticipant(System.String,System.String)">
+             <summary>
+            The HTTP GET method is used to request this resource. The format of this resources URI is below.
+             </summary>
+             <param name="conferenceSid">Conference sid</param>
+             <param name="participant">Specifies the participant to hangup.</param>
+             <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Conference_PlayAudio(System.String,System.String,System.String)">
+            <summary>
+            Play audio to participant of conference call
+            </summary>
+            <param name="conferenceSid">Conference sid</param>
+            <param name="participant">Specifies the participant to play audio.</param>
+            <param name="url">Url where audio is located</param>
+            <returns></returns>
+        </member>
+        <member name="P:Msg360API.Msg360APIRestClient.ApiVersion">
+            <summary>
+            Msg360API API version to use when making requests
+            </summary>
+        </member>
+        <member name="P:Msg360API.Msg360APIRestClient.BaseUrl">
+            <summary>
+            Base URL of Rest Service
+            </summary>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Initializes a new REST client with credentials
+            </summary>
+            <param name="accountSid">The AccountSid to authenticate with</param>
+            <param name="authToken">The AuthToken to authenticate with</param>
+            <param name="responseFormat">The Response to be returned</param>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.#ctor(Msg360API.IMSG360APIConfiguration)">
+            <summary>
+            Initializes a new REST client with credentials
+            </summary>
+            <param name="configuration">MSG360APIConfiguration</param>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Connect">
+            <summary>
+            Authenticate and connect to Rest service with credentials
+            </summary>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Execute``1(RestSharp.RestRequest)">
+            <summary>
+            Execute REST request
+            </summary>
+            <typeparam name="T">The type of object to create and populate with data</typeparam>
+            <param name="request">The RestRequest to execute</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Execute(RestSharp.IRestRequest)">
+            <summary>
+            Execute a REST request
+            </summary>
+            <param name="request">The RestRequest to execute</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Execute(RestSharp.RestRequest)">
+            <summary>
+            Implemented method for Message360
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.GetParameterNameWithEquality(System.Nullable{Msg360API.ComparisonType},System.String)">
+            <summary>
+            Helper for adding inequalities for DateTime parameters
+            </summary>
+            <param name="comparisonType">Comparasion type (less or greater)</param>
+            <param name="parameterName">DateTime parameter name</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_SendEmail(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            This endpoint allows you to send email.
+            </summary>
+            <param name="to">email address of receipent</param>
+            <param name="cc">email address of receipent</param>
+            <param name="bcc">email address of receipent</param>
+            <param name="subject">Subject of email</param>
+            <param name="type">Email Type</param>
+            <param name="message">Message Body</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_SendEmail(System.String,System.String,System.String,System.String,System.String,System.String,System.String[])">
+            <summary>
+            This endpoint allows you to send email.
+            </summary>
+            <param name="to">email address of receipent</param>
+            <param name="cc">email address of receipent</param>
+            <param name="bcc">email address of receipent</param>
+            <param name="subject">Subject of email</param>
+            <param name="type">Email Type</param>
+            <param name="message">Message Body</param>
+            <param name="attachment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_SendEmail(System.String,System.String,System.String)">
+            <summary>
+            This endpoint allows you to send email.
+            </summary>
+            <param name="to">email address of receipent</param>
+            <param name="subject">Subject of email</param>
+            <param name="message">Message Body</param>
+            <param name="attachment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_BlockEmail_ListBlocks(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This endpoint allows you to retrieve entries in the Blocks list.
+            </summary>
+            <param name="offSet"></param>
+            <param name="limit"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_BlockEmail_ListBlocks">
+            <summary>
+            This endpoint allows you to retrieve entries in the Blocks list.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_BouncedEmail_ListBouncedEmail(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This endpoint allows you to retrieve entries in the Bounces list.
+            </summary>
+            <param name="offSet"></param>
+            <param name="limit"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_BouncedEmail_ListBouncedEmail">
+            <summary>
+            This endpoint allows you to retrieve entries in the Bounces list.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_BouncedEmails_DeleteBouncedEmail(System.String)">
+            <summary>
+            This endpoint allows you to delete entries in the bounces list.
+            </summary>
+            <param name="emailAddress">Email address to be blocked</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_SpamEmail_ListSpamEmail(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This endpoint allows you to retrieve entries in the Bounces list.
+            </summary>
+            <param name="offSet"></param>
+            <param name="limit"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_SpamEmail_ListSpamEmail">
+            <summary>
+            This endpoint allows you to retrieve entries in the Bounces list.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_SpamEmail_DeleteSpamEmail(System.String)">
+            <summary>
+            This endpoint allows you to delete entries in the Blocks list.
+            </summary>
+            <param name="emailAddress">Blocked Email Address</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_InavlidEmail_ListInavlidEmail(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This endpoint allows you to retrieve entries in the Bounces list.
+            </summary>
+            <param name="offSet"></param>
+            <param name="limit"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_InavlidEmail_ListInvalidEmail">
+            <summary>
+            This endpoint allows you to retrieve entries in the Bounces list.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_InvalidEmail_DeleteInvalidEmail(System.String)">
+            <summary>
+            This endpoint allows you to delete entries in the Blocks list.
+            </summary>
+            <param name="emailAddress">Blocked Email Address</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_UnsubscribesEmail_AddUnsubscribes(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_UnsubscribesEmail_ListUnsubscribes(System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            This endpoint allows you to retrieve entries in the Bounces list.
+            </summary>
+            <param name="offSet"></param>
+            <param name="limit"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_UnsubscribesEmail_ListUnsubscribes">
+            <summary>
+            This endpoint allows you to retrieve entries in the Bounces list.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_UnsubscribesEmail_DeleteUnsubscribes(System.String)">
+            <summary>
+            This endpoint allows you to delete entries in the Blocks list.
+            </summary>
+            <param name="emailAddress">Blocked Email Address</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Email_BlocksEmail_DeleteBlockedEmailAddress(System.String)">
+            <summary>
+            This endpoint allows you to delete entries in the Blocks list.
+            </summary>
+            <param name="emailAddress">Blocked Email Address</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PhoneNumbers_ViewIncomingPhoneNumber(System.String)">
+            <summary>
+            The response returned here contains all resource properties associated with the requested Message360 phone number.
+            </summary>
+            <param name="phoneNumber">An alphanumeric string used for identification of incoming phone numbers.</param>
+            <returns>string</returns>        
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PhoneNumbers_ListIncomingNumbers(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Msg360API.AvaliablePhoneNumberType},System.String)">
+            <summary>
+            The HTTP POST method is used to request this resource. The format of this resources URI is below.
+            </summary>
+            <param name="phoneNumber">Specifies what IncomingPhoneNumber resources should be returned in the list request.</param>
+            <param name="friendlyName">Specifies that only IncomingPhoneNumber resources matching the input FreindlyName should be returned in the list request.</param>
+            <param name="page">Used to return a particular page withing the list.</param>
+            <param name="pageSize">Used to specify the amount of list items to return per page.</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PhoneNumbers_ListIncomingNumbers">
+            <summary>
+            The HTTP POST method is used to request this resource. The format of this resources URI is below.
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PhoneNumbers_BuyNumber(System.String)">
+            <summary>
+            Here you can experiment with adding incoming phone numbers to your Message360 account and view the request response generated when doing so.
+            </summary>
+            <param name="phonenumber">An alphanumeric string used for identification of incoming phone numbers.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PhoneNumbers_UpdateIncomingPhoneNumber(Msg360API.IncomingPhoneNumber)">
+            <summary>
+            Here you can experiment with updating an incoming Message360 phone number and view the request response generated when doing so.
+            </summary>
+            <param name="phoneNumber">IncomingPhoneNumber object</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PhoneNumbers_ReleaseNumber(System.String)">
+            <summary>
+            Here you can experiment with deleting an incoming Message360 phone number and view the request response generated when doing so.
+            </summary>
+            <param name="phonenumber">phonenumber</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PostCardServices_CreatePostCard(System.String,System.String,System.String,System.Object,System.Object,System.String,System.String,System.String,System.String)">
+            <summary>
+            The postcards endpoint allows you to easily print and mail postcards. The postcard front must be supplied as a PDF, image, 
+            or an HTML string. The back can be a PDF, image, HTML string, or it can be automatically generated by supplying a custom 
+            message. The API provides endpoints for creating postcards, retrieving individual postcards, and retrieving a list of
+            postcards.
+            </summary>
+            <param name="to"></param>
+            <param name="from"></param>
+            <param name="postcardId"></param>
+            <param name="front"></param>
+            <param name="back"></param>
+            <param name="message"></param>
+            <param name="setting"></param>
+            <param name="description"></param>
+            <param name="htmlData"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PostCardServices_CreatePostCard(System.String,System.String,System.String,System.Object,System.Object,System.String,System.String)">
+            <summary>
+            The postcards endpoint allows you to easily print and mail postcards. The postcard front must be supplied as a PDF, image, 
+            or an HTML string. The back can be a PDF, image, HTML string, or it can be automatically generated by supplying a custom
+            message. The API provides endpoints for creating postcards, retrieving individual postcards, and retrieving a list of 
+            postcards.
+            </summary>
+            <param name="to"></param>
+            <param name="from"></param>
+            <param name="postcardId"></param>
+            <param name="front"></param>
+            <param name="back"></param>
+            <param name="message"></param>
+            <param name="setting"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PostCardServices_ViewPostcard(System.String)">
+            <summary>
+            The postcards endpoint allows you to easily print and mail postcards. The postcard front must be supplied as a PDF, image, or an HTML string. The back can be a PDF, image, HTML string, or it can be automatically generated by supplying a custom message. The API provides endpoints for creating postcards, retrieving individual postcards, and retrieving a list of postcards.
+            Retrieves the postcard with a given ID. You need only supply the unique postcard ID that was returned upon postcard creation.
+            </summary>
+            <param name="postcardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PostCardServices_ListPostcard(System.Nullable{System.Int32},System.Nullable{System.Int32},System.String,System.Nullable{System.DateTime})">
+            <summary>
+            Postcards allow you to send your a print job for an postcard that will be printed and mailed. Postcards have both a front and back and can either be generated via the API or using images. You can retrieve individual postcards as well as a list of all your postcards.
+            Returns a list of postcards. The postcards are returned sorted by creation date, with the most recently created postcards appearing first.
+            </summary>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="postcardId"></param>
+            <param name="datecreated"></param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PostCardServices_ListPostcard">
+            <summary>
+            Postcards allow you to send your a print job for an postcard that will be printed and mailed. Postcards have both a front and back and can either be generated via the API or using images. You can retrieve individual postcards as well as a list of all your postcards.
+            Returns a list of postcards. The postcards are returned sorted by creation date, with the most recently created postcards appearing first.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.PostCardServices_DeletePostcard(System.String)">
+            <summary>
+            Delete postcard permenantly.
+            </summary>
+            <param name="postcardId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Recording_ViewRecording(System.String)">
+            <summary>
+            The response returned here contains all resource properties associated with the given RecordingSid.
+            </summary>
+            <param name="recordingSid">An alphanumeric string used to identify each recording.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Recording_ListRecordings">
+            <summary>
+            The request response returned here contains a list of all recordings that have occurred through your Message360 account.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Recording_ListRecordings(System.String,System.Nullable{System.DateTime},System.Nullable{Msg360API.ComparisonType},System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            The request response returned here contains a list of all recordings that have occurred through your Message360 account.
+            </summary>
+            <param name="callSid">An alphanumeric string used to identify each call</param>
+            <param name="dateCreated">Lists all recordings created on or after a certain date</param>
+            <param name="dateCreatedComparasion">Date created comparasion</param>
+            <param name="page">Used to return a particular page withing the list.</param>
+            <param name="pageSize">Used to specify the amount of list items to return per page.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Recording_DeleteRecordings(System.String)">
+            <summary>
+            Here you can experiment with deleting a recording and view the request response generated when doing so.
+            </summary>
+            <param name="recordingSid">An alphanumeric string used to identify recording to be deleted</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.SMS_ViewSMS(System.String)">
+            <summary>
+            The response returned here contains all resource properties associated with the given SMSMessageSid.
+            </summary>
+            <param name="smsMessageSid">An alphanumeric string used for identification of sms messages.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.SMS_ListSMS">
+            <summary>
+            The request response returned here contains a list of SMS messages associated with your Message360 account.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.SMS_ListSMS(Msg360API.SMSMessageListOptions)">
+            <summary>
+            The request response returned here contains a list of SMS messages associated with your Message360 account.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.SMS_SendSMS(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Here you can experiment with sending an sms through Message360 and view the request response generated when doing so.
+            </summary>
+            <param name="from">The number you want to display as sending the SMS. A surcharge will apply when sending via a custom From number.</param>
+            <param name="to">The number you want to send the SMS to.</param>
+            <param name="body">Text of the SMS message to be sent.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.SMS_SendSMS(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Here you can experiment with sending an sms through Message360 and view the request response generated when doing so.
+            </summary>
+            <param name="from">The number you want to display as sending the SMS. A surcharge will apply when sending via a custom From number.</param>
+            <param name="to">The number you want to send the SMS to.</param>
+            <param name="body">Text of the SMS message to be sent.</param>
+            <param name="statusCallback">URL that a set of default parameters will be forwarded to once the SMS is complete.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.SMS_InboundSMS(Msg360API.SMSMessageListOptions)">
+            <summary>
+            The request response returned here contains a list of SMS messages associated with your Message360 account.
+            </summary>
+            <param name="smsMessageOptions">Sms message options for narrowing search</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.SMS_TFNSMSOptIn(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Here you can experiment with Optin numbers before sending sms from toll-free number through Message360 and view the request response generated when doing so.
+            </summary>
+            <param name="smsMessageOptions">Sms message options for narrowing search</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.CreateSmsMessageListOptions(Msg360API.SMSMessageListOptions,RestSharp.RestRequest)">
+            <summary>
+            Helper Method to populate RestRequest params
+            </summary>
+            <param name="smsMessageOptions">Sms message options</param>
+            <param name="request">Rest request</param>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Transcription_VeiwTranscription(System.String)">
+            <summary>
+            The response returned here contains all resource properties associated with the given TranscriptionSid.
+            </summary>
+            <param name="transcriptionSid">An alphanumeric string used for identification of transcriptions.</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Transcription_ListTranscriptions">
+             <summary>
+            The request response returned here contains a list of transcriptions that have occurred through your message360 account.
+             </summary>
+             <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Transcription_ListTranscriptions(System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{Msg360API.TranscriptionStatus},System.Nullable{System.DateTime})">
+            <summary>
+            The request response returned here contains a list of transcriptions that have occurred through your message360 account.
+            </summary>
+            <param name="page">Used to return a particular page withing the list.</param>
+            <param name="pageSize">Used to specify the amount of list items to return per page.</param>
+            <param name="status"></param>
+            <param name="dateTranscribed"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Transcription_TranscribeAudioURL(System.String)">
+            <summary>
+            Here you can experiment with transcribing audio located at a URL and view the request response generated when doing so.
+            </summary>
+            <param name="audioUrl">URL where the audio to be transcribed is located.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Transcription_TranscribeRecording(System.String)">
+            <summary>
+            Here you can experiment with transcribing recordings that have occurred through your message360 account and view the request response generated when doing so.
+            </summary>
+            <param name="recordingSid">An alphanumeric string used for identification of recording.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Usage_ListUsages">
+            <summary>
+            The request response returned here contains a list of usages resources associated with your message360 account.
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Usage_ListUsages(System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{Msg360API.Products})">
+            <summary>
+            The request response returned here contains a list of usages resources associated with your message360 account.
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="M:Msg360API.Msg360APIRestClient.Usage_ListUsagesBySID(System.String)">
+            <summary>
+            The request response returned here contains usages resources associated with your message360 account.
+            </summary>
+            <returns>String</returns>
+        </member>
+        <member name="P:Msg360API.Application.Sid">
+            <summary>
+            An alphanumeric string used for identification of the application.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.AccountSid">
+            <summary>
+            An alphanumeric string identifying the account this application is registered with.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.FriendlyName">
+            <summary>
+            String defining this resource.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.VoiceUrl">
+            <summary>
+            The URL returning InboundXML incoming calls should execute when connected.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.VoiceMethod">
+            <summary>
+            Specifies the HTTP method (GET or POST) used to request the VoiceUrl once incoming call connects.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.VoiceFallbackUrl">
+            <summary>
+            URL used if any errors occur during execution of InboundXML on a call or at initial request of the VoiceUrl.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.VoiceFallbackMethod">
+            <summary>
+            Specifies the HTTP method (GET or POST) used to request the VoiceFallBackUrl if it is needed.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.VoiceCallerIdLookup">
+            <summary>
+            Look up the callers caller ID name from a CNAM database (additional charges apply). Either true or false.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.DateCreated">
+            <summary>
+            The date the application resource was created.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.DateUpdated">
+            <summary>
+            The date the application resource was last updated.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.SmsUrl">
+            <summary>
+            The URL returning InboundXML incoming phone numbers should execute when receiving an sms.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.SmsMethod">
+            <summary>
+            The HTTP method used when making requests to the SmsUrl. Either GET or POST.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.SmsFallbackUrl">
+            <summary>
+            URL used if any errors occur during execution of InboundXML from an sms or at initial request of the SmsUrl.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.SmsFallbackMethod">
+            <summary>
+            Specifies the HTTP method (GET or POST) used to request the SmsFallbackUrl.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.HeartbeatUrl">
+            <summary>
+            URL that can be used to monitor the phone number.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.HeartbeatMethod">
+            <summary>
+            The HTTP method Msg360API will use when requesting the HeartbeatURL. Either GET or POST.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.HangupCallback">
+            <summary>
+            URL that can be requested to receive notification when and how incoming call has ended.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.HangupCallbackMethod">
+            <summary>
+            Specifies the HTTP method (GET or POST) used to request the HangupCallback URL.
+            </summary>
+        </member>
+        <member name="P:Msg360API.Application.ApiVersion">
+            <summary>
+            The API version used with this application.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallListOptions.Page">
+            <summary>
+            Used to return a particular page withing the list.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallListOptions.PageSize">
+            <summary>
+            Used to specify the amount of list items to return per page.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallListOptions.To">
+            <summary>
+            Lists all calls made to this number only.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallListOptions.From">
+            <summary>
+            Lists all calls made from this number.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallListOptions.StartTimeComaparasion">
+            <summary>
+            Comparison type for start time date
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.Method">
+            <summary>
+            Specifies the HTTP method used to request the required URL once call connects.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.StatusCallback">
+            <summary>
+            URL that can be requested to receive notification when call has ended.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.FallbackUrl">
+            <summary>
+            URL used if any errors occur during execution of InboundXML or at initial request of the required Url provided with the POST.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.FallbackMethod">
+            <summary>
+            Specifies the HTTP method used to request FallbackUrl.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.HeartbeatUrl">
+            <summary>
+            URL that can be requested every 60 seconds during the call to notify of elapsed time and pass other general information.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.HeartbeatMethod">
+            <summary>
+            Specifies the HTTP method used to request the Heartbeat URL.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.Timeout">
+            <summary>
+            Number of seconds call stays on the line while waiting for an answer. The max time limit is 999 and the default limit is 60 seconds but lower times can be set.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.PlayDtmf">
+            <summary>
+            DTMF Digits to play to the call once it connects. 0-9, #, or *
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.HideCallerId">
+            <summary>
+            Specifies if the caller id will be hidden.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.Record">
+            <summary>
+            Specifies whether this call should be recorded.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.RecordCallback">
+            <summary>
+            A URL some parameters regarding the recording will be past to once it is completed.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.Transcribe">
+            <summary>
+            Specifies whether this call should be transcribed.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.TranscribeCallback">
+            <summary>
+            A URL some parameters regarding the transcription will be past to once it is completed.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.StatusCallbackMethod">
+            <summary>
+            Specifies the HTTP method used to request StatusCallbackUrl.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.To">
+            <summary>
+            The number to call.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.From">
+            <summary>
+            The number to display as calling.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.Url">
+            <summary>
+            The URL requested once the call connects. 
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.RecordCallbackMethod">
+            <summary>
+            Method used to request the RecordCalback URL.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.FromCountryCode">
+            <summary>
+            Method used to request the RecordCalback URL.
+            </summary>
+        </member>
+        <member name="P:Msg360API.CallOptions.ToCountryCode">
+            <summary>
+            Method used to request the RecordCalback URL.
+            </summary>
+        </member>
+        <member name="T:Msg360API.IMSG360APIConfiguration">
+            <summary>
+            Interface for Msg360API configuration
+            </summary>
+        </member>
+        <member name="P:Msg360API.IMSG360APIConfiguration.ApiVersion">
+            <summary>
+            Msg360API API version to use when making requests
+            </summary>
+        </member>
+        <member name="P:Msg360API.IMSG360APIConfiguration.BaseUrl">
+            <summary>
+            Base URL of Rest Service
+            </summary>
+        </member>
+        <member name="P:Msg360API.IMSG360APIConfiguration.AccountSid">
+            <summary>
+            Account Sid
+            </summary>
+        </member>
+        <member name="P:Msg360API.IMSG360APIConfiguration.AuthToken">
+            <summary>
+            Authentication Token
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Msg360API.IMSG360APIConfiguration.ResponseFormat" -->
+        <member name="T:Msg360API.AvaliablePhoneNumberType">
+            <summary>
+            Yet to come
+            </summary>
+        </member>
+        <member name="T:Msg360API.AccountStatus">
+            <summary>
+            Acount statuses
+            </summary>
+        </member>
+        <member name="T:Msg360API.CallStatus">
+            <summary>
+            Call statuses
+            </summary>
+        </member>
+        <member name="F:Msg360API.ComparisonType.EqualTo">
+            <summary>
+            Selects items equal to value
+            </summary>
+        </member>
+        <member name="F:Msg360API.ComparisonType.GreaterThanOrEqualTo">
+            <summary>
+            Selects items greater than or equal to value
+            </summary>
+        </member>
+        <member name="F:Msg360API.ComparisonType.LessThanOrEqualTo">
+            <summary>
+            Selects items less than or equal to value
+            </summary>
+        </member>
+        <member name="T:Msg360API.HangupCallStatus">
+            <summary>
+            Hangup call statuses
+            </summary>
+        </member>
+        <member name="T:Msg360API.SmsMessageStatus">
+            <summary>
+            Sms message statuses
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.PhoneNumber">
+            <summary>
+            The E.164 format number of each incoming number.
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.FriendlyName">
+            <summary>
+            Domestic format version of the Msg360API phone number  
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.VoiceUrl">
+            <summary>
+            The URL returning InboundXML incoming calls should execute when connected.
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.VoiceMethod">
+            <summary>
+            Specifies the HTTP method (GET or POST) used to request the VoiceUrl once incoming call connects.
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.VoiceFallbackUrl">
+            <summary>
+            URL used if any errors occur during execution of InboundXML on a call or at initial request of the VoiceUrl.
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.VoiceFallbackMethod">
+            <summary>
+            Specifies the HTTP method (GET or POST) used to request the VoiceFallBackUrl if it is needed.
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.HangupCallback">
+            <summary>
+            URL that can be requested to receive notification when and how incoming call has ended.
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.HangupCallbackMethod">
+            <summary>
+            Specifies the HTTP method (GET or POST) used to request the HangupCallback URL.
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.HeartbeatUrl">
+            <summary>
+            URL that can be used to monitor the phone number.
+            </summary>
+        </member>
+        <member name="P:Msg360API.IncomingPhoneNumber.HeartbeatMethod">
+            <summary>
+            The HTTP method Msg360API will use when requesting the HeartbeatURL. Either GET or POST.
+            </summary>
+        </member>
+        <member name="T:Msg360API.MSG360APIBase">
+            <summary>
+            Msg360API base abstract class
+            </summary>
+        </member>
+        <member name="P:Msg360API.MSG360APIBase.RestException">
+            <summary>
+            Exception information
+            </summary>
+        </member>
+        <member name="P:Msg360API.MSG360APIBase.Uri">
+            <summary>
+            Uri
+            </summary>
+        </member>
+        <member name="T:Msg360API.MSG360APIException">
+            <summary>
+            Msg360API Exception class
+            </summary>
+        </member>
+        <member name="T:Msg360API.RequestUri">
+            <summary>
+            List of all Request Uri's for Msg360API
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetAccoutUri">
+            <summary>
+            Uri to get account information
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetSmsMessageUri">
+            <summary>
+            Uri to get Sms message
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetSmsMessagesUri">
+            <summary>
+            Uri to get list of sms messages
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetInboundSmsUri">
+            <summary>
+            Uri to get list of sms messages
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetTFNSMSOptInUri">
+            <summary>
+            Uri to get list of sms messages
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.SendSmsMessageUri">
+            <summary>
+            Uri to send sms message
+            sms/sendsms
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetCallUri">
+            <summary>
+            Uri to get call information
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetCallsUri">
+            <summary>
+            Uri to get list of call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.MakeCallUri">
+            <summary>
+            Uri to initiate outbound call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.InterruptLiveCallUri">
+            <summary>
+            Uri to interrupt live call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.SendDigitsUri">
+            <summary>
+            Uri to send digits to call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.PlayAudioUri">
+            <summary>
+            Uri to play audio on call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.VoiceEffectsUri">
+            <summary>
+            Uri to add voice effects
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.RecordCallUri">
+            <summary>
+            Uri to start/stop recording call
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.SendEmailUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.ListBlockEmailUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.ListBouncedEmailUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.DeleteBlockedEmailAddressUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.DeleteBouncedEmailsUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.SpamEmailsListOfEmailsUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.SpamEmailsDeleteSpamEmailUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.InvalidEmailsListOfEmailsUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.InvalidEmailsDeleteInvalidEmailUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.AddUnsubscribesEmailAddressUri" -->
+        <!-- Badly formed XML comment ignored for member "F:Msg360API.RequestUri.ListUnsubscribesEmailAddressUri" -->
+        <member name="F:Msg360API.RequestUri.DeleteUnsubscribesEmailAddressUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.CreateAddressesUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ViewAddressesUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ListAddressesUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.VerifyAddressesUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.DeleteAddressesUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.CreatePostcardUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ViewPostcardUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ListPostcardsdUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.DeletePostcardsdUri">
+            <summary>
+            Uri to get notification
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.NotificationsUri">
+            <summary>
+            Uri to get notifications
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.CallNotificationUri">
+            <summary>
+            Uri to get call notifications
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.AvailablePhoneNumbersUri">
+            <summary>
+            Uri to get avaliable phone numbers (local)
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.AvailableTollFreePhoneNumbersUri">
+            <summary>
+            Uri to get avaliable phone numbers (toll free)
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.IncomingPhoneNumberUri">
+            <summary>
+            Uri to get incoming phone number
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ListIncomingNumbersUri">
+            <summary>
+            Uri to get incoming phone numbers
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.BuyNumberUri">
+            <summary>
+            Uri to get incoming phone numbers
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ReleaseNumberUri">
+            <summary>
+            Uri to get incoming phone numbers
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.IncomingPhoneNumbersUri">
+            <summary>
+            Uri to get incoming phone numbers
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.CreateIncomingPhoneNumber">
+            <summary>
+            Uri to create Incoming phone number
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.DeleteIncomingPhoneNumberUri">
+            <summary>
+            Uri to delete Incoming phone number
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.UpdateIncomingPhoneNumberUri">
+            <summary>
+            Uri to update Incoming phone number
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ApplicationUri">
+            <summary>
+            Uri to get application data
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ApplicationsUri">
+            <summary>
+            Uri to get list of applications
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.CreateApplicationUri">
+            <summary>
+            Uri to create new application
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.UpdateApplicationUri">
+            <summary>
+            Uri to update application data
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.DeleteApplicationUri">
+            <summary>
+            Uri to delete application
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.RecordingUri">
+            <summary>
+            Uri to recording
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ListRecordingUri">
+            <summary>
+            Uri to recording
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.DeleteRecordingUri">
+            <summary>
+            Uri to recording
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.AccountRecordingsUri">
+            <summary>
+            Uri to account recordings
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.CallRecordingsUri">
+            <summary>
+            Uri to call recordings
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.TranscriptionUri">
+            <summary>
+            Uri to transcription
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.TranscriptionTextUri">
+            <summary>
+            Uri to transcription text
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.AccountTranscriptionsUri">
+            <summary>
+            Uri to account transcriptions
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.AccountListTranscriptionsUri">
+            <summary>
+            Uri to account transcriptions
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.RecordingTranscriptionsUri">
+            <summary>
+            Uri to recording transcriptions
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.TranscribeRecordingUri">
+            <summary>
+            Uri to start transcribe of recording
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.TranscribeAudioUri">
+            <summary>
+            Uri to start transcribe of external audio url
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.CarrierLookupUri">
+            <summary>
+            Uri to carrier lookup   
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.CarrierLookUpListUri">
+            <summary>
+            Uri to CNAM lookup
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferenceUri">
+            <summary>
+            Uri to conference
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferencesUri">
+            <summary>
+            Uri to conferences
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferenceParticipantsUri">
+            <summary>
+            Uri to get all conference participants
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferenceDeaf_MuteParticipantUri">
+            <summary>
+            Uri to Deaf/Mute participant
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferenceHangUpParticipantUri">
+            <summary>
+            Uri to take action on participant
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferenceAddParticipantUri">
+            <summary>
+            Uri to Add Participant to Conference Call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferenceListParticipantUri">
+            <summary>
+            Uri to Add Participant to Conference Call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferencePlayAudioToParticipantUri">
+            <summary>
+            Uri to play audio to member in conference call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferenceStartRecordingUri">
+            <summary>
+            Uri to start recording conference call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.ConferenceStopRecording">
+            <summary>
+            Uri to stop recording conference call
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.FraudControlResourcesUri">
+            <summary>
+            Uri to get all fraud control resources
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.FraudAuthorizeDestination">
+            <summary>
+            Uri to authorize destination
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.FraudBlockDestination">
+            <summary>
+            Uri to block destination
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.FraudExtendDestinationAuthUri">
+            <summary>
+            Uri to extend authorization of destination
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.FraudWhitelistDestination">
+            <summary>
+            Uri to whitelist destination
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetUsagesUri">
+            <summary>
+            Uri to get account usages
+            old 
+            "Accounts/{AccountSid}/Usages.json";
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.GetUsageUri">
+            <summary>
+            Uri to get single account usage by sid
+            "Accounts/{AccountSid}/Usages/{UsageSid}.json";
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUri.BnaLookup">
+            <summary>
+            Uri to have a BNA lookup on phone number
+            </summary>
+        </member>
+        <member name="T:Msg360API.RequestUriParams">
+            <summary>
+            List of all required Request Uri params
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.SmsMessageSid">
+            <summary>
+            Sms message Sid
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.CallSid">
+            <summary>
+            Call Sid
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.NotificationSid">
+            <summary>
+            Notification Sid
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.AddressId">
+            <summary>
+            Notification Sid
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.IsoCountryCode">
+            <summary>
+            Iso country code
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.CountryCode">
+            <summary>
+            Country code
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.IncomingPhoneNumberSid">
+            <summary>
+            Incoming phone number
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.ApplicationSid">
+            <summary>
+            Application Sid
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.RecordingSid">
+            <summary>
+            Recording Sid
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.TranscriptionSid">
+            <summary>
+            Transcription Sid
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.PhoneNumber">
+            <summary>
+            Phone number
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.ConferenceSid">
+            <summary>
+            Conference name
+            </summary>
+        </member>
+        <member name="F:Msg360API.RequestUriParams.UsageSid">
+            <summary>
+            Usage sid
+            </summary>
+        </member>
+        <member name="P:Msg360API.RestException.Status">
+            <summary>
+            Message status about exception
+            </summary>
+        </member>
+        <member name="P:Msg360API.RestException.MoreInfo">
+            <summary>
+            Detailed information, if avaliable
+            </summary>
+        </member>
+        <member name="P:Msg360API.RestException.Code">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:Msg360API.RestException.Message">
+            <summary>
+            Message about exception
+            </summary>
+        </member>
+        <member name="P:Msg360API.SMSMessageListOptions.To">
+            <summary>
+            Lists all SMS messages sent to this number.
+            </summary>
+        </member>
+        <member name="P:Msg360API.SMSMessageListOptions.From">
+            <summary>
+            Lists all SMS messages sent from this number.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Msg360API.SMSMessageListOptions.DateSent" -->
+        <member name="P:Msg360API.SMSMessageListOptions.DateSentComparison">
+            <summary>
+            Comparison type for date sent
+            </summary>
+        </member>
+        <member name="P:Msg360API.SMSMessageListOptions.Page">
+            <summary>
+            Used to return a particular page withing the list.
+            </summary>
+        </member>
+        <member name="P:Msg360API.SMSMessageListOptions.PageSize">
+            <summary>
+            Used to specify the amount of list items to return per page.
+            </summary>
+        </member>
+    </members>
+</doc>
