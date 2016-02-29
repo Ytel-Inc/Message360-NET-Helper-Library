@@ -15,7 +15,7 @@ Console.ReadLine();
 ##### Below are the required Dependencies:
 https://www.nuget.org/packages/Newtonsoft.Json/
 
-https://www.nuget.org/packages/RestSharp/
+https://www.nuget.org/packages/RestSharp/<BR>
 Install-Package RestSharp -Version 103.4
 
 
