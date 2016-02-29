@@ -16,6 +16,7 @@ Console.ReadLine();
 https://www.nuget.org/packages/Newtonsoft.Json/
 
 https://www.nuget.org/packages/RestSharp/
+Install-Package RestSharp -Version 103.4
 
 
 ### About Message360
