@@ -6,11 +6,31 @@
 This is home to the Official .NET Message360 REST API. 
 
 ```C#
-Msg360APIRestClient Client = new Msg360APIRestClient("YT10ff38384xyz", "1acff58abc", ".xml");
-var random = new Random();
-var newSms = Client.SMS_SendSMS("5552221133", "6203345599", "test sms " + random.ToString(), "1", "1");
-Console.WriteLine(newSms.ToString());
-Console.ReadLine();
+using MSG360API;
+using System;
+namespace TESTMSGAPI
+{
+    public class Program
+    {
+        static Msg360APIRestClient Client;
+        public const string AuthToken = "xyz5853c8f26d269b259b7xxx";
+        public const string AccountSid = "abc-080c-49ab-bbe4-xxx";
+        public const string ResponseFormat = ".xml";
+        public const string BaseUrl = "https://api.message360.com/api/";
+        static void Main(string[] args)
+        {
+            Client = new Msg360APIRestClient(AccountSid, AuthToken, ResponseFormat, BaseUrl);
+            TestSMS(Client);
+        }
+
+        public static void TestSMS(Msg360APIRestClient Client)
+        {
+            var sms = Client.SMS_SendSMS("2215913999", "9453513322", "Testing", "1", "1");
+            Console.Write(sms.ToString());
+            Console.ReadLine();
+        }
+    }
+}
 ```
 ##### Below are the required Dependencies:
 https://www.nuget.org/packages/Newtonsoft.Json/
