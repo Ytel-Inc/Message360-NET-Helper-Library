@@ -41,27 +41,47 @@
         <p><img src="http://message360.com/wordpress/wp-content/uploads/2014/08/message360.png" alt=""></p>
 
 <h3>
-<a id="welcome-to-the-message360-net-helper-library" class="anchor" href="#welcome-to-the-message360-net-helper-library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the Message360 .NET Helper Library</h3>
+<a id="welcome-to-the-message360-net-helper-library" class="anchor" href="#welcome-to-the-message360-net-helper-library" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to the Message360 .NET Helper Library</h3>
 
 <p>This is home to the Official .NET Message360 REST API and InboundXML Libraries. </p>
 
 <p><strong>Example:</strong></p>
 
-<div class="highlight highlight-source-cs"><pre>Msg360APIRestClient Client = <span class="pl-k">new</span> Msg360APIRestClient(<span class="pl-s"><span class="pl-pds">"</span>YT10ff38384xyz<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>1acff58abc<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>.xml<span class="pl-pds">"</span></span>);
-<span class="pl-k">var</span> random = <span class="pl-k">new</span> Random();
-<span class="pl-k">var</span> newSms = Client.SMS_SendSMS(<span class="pl-s"><span class="pl-pds">"</span>5552221133<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>6203345599<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>test sms <span class="pl-pds">"</span></span> + random.ToString(), <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>);
-Console.WriteLine(newSms.ToString());
-Console.ReadLine();</pre></div>
+<div class="highlight highlight-source-cs"><pre><span class="pl-k">using</span> MSG360API<span class="pl-k">;</span>
+<span class="pl-k">using</span> System<span class="pl-k">;</span>
+<span class="pl-k">namespace</span> <span class="pl-en">TESTMSGAPI</span>
+{
+    <span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">Program</span>
+    {
+        <span class="pl-k">static</span> Msg360APIRestClient Client;
+        <span class="pl-k">public</span> <span class="pl-k">const</span> <span class="pl-k">string</span> AuthToken = <span class="pl-s"><span class="pl-pds">"</span>xyz5853c8f26d269b259b7xxx<span class="pl-pds">"</span></span>;
+        <span class="pl-k">public</span> <span class="pl-k">const</span> <span class="pl-k">string</span> AccountSid = <span class="pl-s"><span class="pl-pds">"</span>abc-080c-49ab-bbe4-xxx<span class="pl-pds">"</span></span>;
+        <span class="pl-k">public</span> <span class="pl-k">const</span> <span class="pl-k">string</span> ResponseFormat = <span class="pl-s"><span class="pl-pds">"</span>.xml<span class="pl-pds">"</span></span>;
+        <span class="pl-k">public</span> <span class="pl-k">const</span> <span class="pl-k">string</span> BaseUrl = <span class="pl-s"><span class="pl-pds">"</span>https://api.message360.com/api/<span class="pl-pds">"</span></span>;
+        <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">Main</span>(<span class="pl-k">string[]</span> <span class="pl-smi">args</span>)
+        {
+            Client = <span class="pl-k">new</span> Msg360APIRestClient(AccountSid, AuthToken, ResponseFormat, BaseUrl);
+            TestSMS(Client);
+        }
+
+        <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">TestSMS</span>(<span class="pl-k">Msg360APIRestClient</span> <span class="pl-smi">Client</span>)
+        {
+            <span class="pl-k">var</span> sms = Client.SMS_SendSMS(<span class="pl-s"><span class="pl-pds">"</span>2215913999<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>9453513322<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>Testing<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>, <span class="pl-s"><span class="pl-pds">"</span>1<span class="pl-pds">"</span></span>);
+            Console.Write(sms.ToString());
+            Console.ReadLine();
+        }
+    }
+}</pre></div>
 
 <h5>
-<a id="below-are-the-required-dependencies" class="anchor" href="#below-are-the-required-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Below are the required Dependencies:</h5>
+<a id="below-are-the-required-dependencies" class="anchor" href="#below-are-the-required-dependencies" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Below are the required Dependencies:</h5>
 
 <p><a href="https://www.nuget.org/packages/Newtonsoft.Json/">https://www.nuget.org/packages/Newtonsoft.Json/</a></p>
 
 <p><a href="https://www.nuget.org/packages/RestSharp/">https://www.nuget.org/packages/RestSharp/</a></p>
 
 <h3>
-<a id="about-message360" class="anchor" href="#about-message360" aria-hidden="true"><span class="octicon octicon-link"></span></a>About Message360</h3>
+<a id="about-message360" class="anchor" href="#about-message360" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Message360</h3>
 
 <p>An account for Message360 is free to sign up for at <a href="https://api.message360.com">https://api.message360.com</a>
 Empowering technology to meet modern day communication needs. Through a simple to use API, developers can build, connect, and manage all communications platforms in one system. </p>
@@ -71,12 +91,12 @@ Empowering technology to meet modern day communication needs. Through a simple t
 <p>More information can be obtained about message30 at <a href="http://message360.com/">http://www.message360.com</a></p>
 
 <h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
 
 <p>Having trouble with Pages or the library?  Visit <a href="https://api.message360.com">https://api.message360.com</a> and click the Help button in the bottom right corner or <a href="mailto:support@ytel.com">contact support</a> and we’ll help you sort it out.</p>
 
 <h3>
-<a id="company-information" class="anchor" href="#company-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Company Information</h3>
+<a id="company-information" class="anchor" href="#company-information" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Company Information</h3>
 
 <p>© 2015 Ytel, Inc. | Ytel™ All Rights Reserved. | 800.382.4913 | <a href="http://www.ytel.com">www.ytel.com</a></p>
       </section>
