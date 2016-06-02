@@ -34,9 +34,10 @@ namespace TESTMSGAPI
 ```
 ##### Below are the required Dependencies:
 https://www.nuget.org/packages/Newtonsoft.Json/
+Version 8.0.0.0
 
 https://www.nuget.org/packages/RestSharp/<BR>
-Install-Package RestSharp -Version 103.4
+Version 105.2.3.0
 
 
 ### About Message360
